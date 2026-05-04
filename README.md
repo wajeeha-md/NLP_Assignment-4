@@ -139,14 +139,14 @@ NLP_Assignment-3-main/
     ```
 3.  **Run Indexing:**
     ```bash
-    $env:PYTHONPATH="backend"
+    export PYTHONPATH=$(pwd) # Windows:$env:PYTHONPATH="."
     python backend/RAG/indexer.py
     ```
 4.  **Start the Backend:**
     ```bash
     python backend/api/main.py
     ```
-5.  **Access UI:** Open `frontend/index.html` in any modern browser.
+5.  **Access UI:** Open `http://0.0.0.0:8000` in any modern browser.
 
 ## Performance Benchmarks
 *   **RAG Retrieval:** ~30ms (Cached) / ~500ms (Cold).
